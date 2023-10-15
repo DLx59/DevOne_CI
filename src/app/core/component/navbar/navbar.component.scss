@@ -1,0 +1,153 @@
+@import "../../../../styles/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+
+$border-bottom-style: 1px solid rgba(0, 0, 0, .03);
+
+header {
+  nav.navbar {
+    button.navbar-toggler {
+      border: none;
+
+      &.not-navbar-collapse,
+      &.is-navbar-collapse {
+        i:before {
+          transition: opacity 0.5s ease;
+        }
+      }
+
+      &.not-navbar-collapse {
+        i {
+          font: normal normal normal 22px/1 FontAwesome;
+
+          &:before {
+            content: "\f00d";
+            animation: fade-in-longer 0.5s forwards;
+          }
+        }
+      }
+
+      &.is-navbar-collapse {
+        i {
+          font: normal normal normal 22px/1 FontAwesome;
+
+          &:before {
+            content: "\f0c9";
+            opacity: 0;
+            animation: fade-in 0.5s forwards;
+          }
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .navbar-collapse {
+      @include media-breakpoint-down('lg') {
+        margin-top: 3%;
+
+        &.show {
+          .nav-item {
+            border-bottom: $border-bottom-style;
+          }
+
+          .dropdown {
+            .dropdown-menu {
+              width: auto;
+              padding: inherit;
+              margin-top: inherit;
+
+              li {
+                border-bottom: $border-bottom-style;
+
+                &:first-child {
+                  border-top: $border-bottom-style;
+                }
+
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+
+              a.dropdown-item {
+                padding: 1%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    li.nav-item {
+      font-family: Roboto-SemiBold, sans-serif;
+
+      a {
+        color: black;
+
+        &:hover {
+          color: $primary;
+
+          span {
+            transition: all .2s ease-in-out;
+            border-bottom: 2px solid #0a3f4c;
+            padding-bottom: 5px;
+          }
+        }
+      }
+
+      &.dropdown {
+        > a.nav-link:after {
+          content: '\f078';
+          font: normal normal normal 10px/1 FontAwesome;
+          vertical-align: middle;
+          margin-left: 5px;
+          position: relative;
+          top: -1px;
+          border: none;
+        }
+
+        ul.dropdown-menu {
+          margin-top: 20px;
+          background-color: $light;
+          border: none;
+          border-radius: 0;
+          width: 340px;
+          padding: 20%;
+
+          .dropdown-item {
+            padding: 3%;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-in-longer {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: .75;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}

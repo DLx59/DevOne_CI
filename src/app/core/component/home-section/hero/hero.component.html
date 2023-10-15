@@ -1,0 +1,36 @@
+<div class="hero-component sect-pad" id="particles-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <h1 class="hero-title">Créez un site internet performant et boostez votre marketing digital</h1>
+          <p class="hero-description">Profitez d'un site web sur mesure et d'une expertise en marketing digital pour
+            attirer plus de clients et augmenter votre visibilité en ligne.</p>
+          <form>
+            <div class="input-group">
+              <label class="contact-form-label" for="phone-number">Numéro de téléphone</label>
+              <input [pattern]="phonePattern" class="form-control" id="phone-number" name="phone-number"
+                     placeholder="Numéro de téléphone"
+                     type="text">
+            </div>
+            <div class="form-check text-start">
+              <input class="form-check-input" id="accept-rules" name="accept-rules" type="checkbox">
+              <label class="form-check-label" for="accept-rules">
+                J'accepte que mon numéro de téléphone soit utilisé dans le cadre de la demande de rappel.
+              </label>
+            </div>
+            <button class="btn btn-outline-quaternary animation" type="submit">Être rappelé</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="d-flex h-100 position-relative z-3">
+          <img alt="Création de site internet, création d'application mobile, formation wordpress"
+               class="img-fluid m-auto"
+               height="213" ngSrc="assets/images/developpeur.svg"
+               priority="template" width="320">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

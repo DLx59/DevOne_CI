@@ -1,0 +1,35 @@
+.reviews-component {
+  padding: 5% 0;
+  margin-bottom: 5%;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, .3);
+  overflow: hidden;
+  border-radius: 25px;
+
+  .content {
+    padding: 0 15%;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    text-align: center;
+
+    .author {
+      font-size: 16px;
+      font-family: Roboto-SemiBold, sans-serif;
+    }
+
+    .rating-stars {
+      display: inline-block;
+      position: relative;
+      font-size: 24px;
+      line-height: 0;
+      color: #fac917;
+
+      &:after {
+        content: '\2606';
+      }
+
+      &.filled:after {
+        content: '\2605';
+      }
+    }
+  }
+}

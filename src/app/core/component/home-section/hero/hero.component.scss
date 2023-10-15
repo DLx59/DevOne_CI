@@ -1,0 +1,52 @@
+@import "../../../../../styles/variables";
+
+.hero-component {
+  background-color: $primary;
+  overflow: hidden;
+  user-select: none;
+
+  &#particles-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;;
+    z-index: 2;
+    text-align: center;
+    color: $light;
+
+    .hero-title {
+      margin-bottom: 10px;
+      letter-spacing: 1.2px;
+    }
+
+    .hero-description {
+      font-size: 16px;
+      font-family: Roboto-Regular, sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .form-check {
+      margin-top: 12px;
+
+      .form-check-label {
+        font-size: 11px;
+      }
+    }
+
+    button {
+      &:after {
+        content: '\f095';
+      }
+    }
+  }
+}

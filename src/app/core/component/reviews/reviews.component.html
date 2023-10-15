@@ -1,0 +1,38 @@
+<div class="reviews-component">
+  <div class="carousel slide" id="carousel">
+    <div class="carousel-indicators">
+      <ng-container *ngFor="let r of reviews; index as index">
+        <button [attr.aria-label]="'Slide '+ reviewIndex" [attr.data-bs-slide-to]="reviewIndex"
+                [ngClass]="{'active' : reviewIndex == index}" aria-current="true"
+                data-bs-target="#carousel" type="button"></button>
+      </ng-container>
+    </div>
+    <div class="carousel-inner">
+      <ng-container *ngFor="let r of reviews; index as index">
+        <div [ngClass]="{'active' : index == reviewIndex}" class="carousel-item">
+          <div class="d-flex">
+            <img alt="avis devone" class="img-fluid m-auto" height="100" ngSrc="assets/images/DevOne_webmaster_logo.svg"
+                 width="100">
+          </div>
+          <div class="content">
+            <p class="description">{{ r.text }}</p>
+            <p class="author">{{ r.author_name}}</p>
+            <ng-container *ngFor="let s of [].constructor(5); index as index">
+              <span [ngClass]="{'filled': index < r.rating}" class="rating-stars filled"></span>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <button (click)="sub()" class="carousel-control-prev" data-bs-slide="prev"
+            data-bs-target="#carousel" type="button">
+      <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button (click)="add()" class="carousel-control-next" data-bs-slide="next"
+            data-bs-target="#carousel" type="button">
+      <span aria-hidden="true" class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

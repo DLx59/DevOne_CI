@@ -1,0 +1,54 @@
+$primary: #0a3f4c;
+$secondary: #2ea3f2;
+$ternary: #00b7cc;
+$quaternary: #00cde1;
+$primary-dark: #002328;
+$light: #fcfcfc;
+$black: #171717;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "ternary": $ternary,
+  "quaternary": $quaternary,
+);
+
+$body-bg: $light;
+$font-family-base: Roboto-Regular, sans-serif;
+
+$btn-font-family: Roboto-SemiBold, sans-serif;
+$btn-font-size: 14px;
+$btn-focus-box-shadow: none;
+$btn-line-height: 1.7em;
+$btn-border-width: 2px;
+$btn-padding-x: 40px;
+$btn-padding-y: 8px;
+$btn-border-radius: 4px;
+$btn-transition: color 300ms ease 0ms, background-color 300ms ease 0ms;
+
+$input-bg: #eeeeee;
+$input-placeholder-color: #999999;
+$input-border-radius: 4px !important;
+$input-padding-x: 16px;
+$input-padding-y: 8px;
+$input-border-width: 1px;
+$input-border-color: #bbbbbb;
+$input-color: $primary-dark;
+$input-font-family: Roboto-Regular, sans-serif;
+$input-height: 40px;
+
+$carousel-control-color: $primary;
+$carousel-indicator-active-bg: $primary;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+$carousel-control-width: 5%;
+
+$form-check-input-border-radius: 2px;
+
+$link-decoration: none;
+
+$navbar-toggler-focus-width: 0;

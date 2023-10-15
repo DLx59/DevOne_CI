@@ -1,0 +1,45 @@
+@import "../../../../styles/variables";
+
+$footer-color: #666666;
+
+footer {
+  &.footer-component {
+    background-color: $black;
+    color: $footer-color;
+    letter-spacing: .5px;
+    text-align: center;
+
+    a {
+      font-family: Roboto-SemiBold, sans-serif;
+      color: $footer-color;
+    }
+
+    i {
+      height: 32px;
+      width: 32px;
+      margin-right: 8px;
+      color: white;
+      border-radius: 3px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out !important;
+
+      &.fa-facebook {
+        background-color: #3b5998;
+      }
+
+      &.fa-linkedin {
+        background-color: #007bb6;
+      }
+
+      &:before {
+        line-height: 32px;
+        font-size: 16px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

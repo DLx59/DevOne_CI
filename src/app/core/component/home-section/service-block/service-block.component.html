@@ -1,0 +1,13 @@
+<div class="service-block-component">
+  <div class="d-flex mb-4">
+    <img role="button" (click)="goto(routerLink)" [alt]="img_alt" [height]="imgHeight" [ngSrc]="imgSrc" [width]="imgWidth"
+         class="m-auto" >
+  </div>
+  <div>
+    <h3 class="my-3">{{ title }}</h3>
+    <p>{{ description }}</p>
+  </div>
+  <div class="text-center mt-3">
+    <a role="button" [routerLink]="routerLink" class="btn btn-primary animation">Plus d'info</a>
+  </div>
+</div>

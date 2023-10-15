@@ -1,0 +1,23 @@
+.service-block-component {
+  padding: 5%;
+
+  p {
+    text-align: justify;
+    line-height: 1.7em;
+  }
+
+  img {
+    transition: transform 0.2s ease-in-out !important;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+  a {
+    &:after {
+      content: '\f054';
+    }
+  }
+}

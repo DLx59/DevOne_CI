@@ -1,0 +1,41 @@
+cache:
+  paths:
+    - node_modules
+    - dist
+    - coverage
+
+default:
+  image: node:lts
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  before_script:
+    - bash ci/build/build_tools_install.sh
+  script:
+    - bash ci/build/build_app.sh
+
+tests:
+  stage: test
+  variables:
+    CI: "true"
+  before_script:
+    - bash ci/tests/tests_tools_install.sh
+  script:
+    - bash ci/tests/tests_run.sh
+
+deploy:
+  stage: deploy
+  before_script:
+    - npm run build
+  script:
+    - apt-get update && apt-get install -y lftp
+    - VERSION=$(date +"%Y_%m_%d")
+    - lftp -c "set ftp:ssl-force true; set ssl:verify-certificate false; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOSTNAME; mkdir -p /backup/$VERSION; mirror -Renv /builds/dwo1/devone/dist/devone /backup/$VERSION"
+    - lftp -c "set ftp:ssl-force true; set ssl:verify-certificate false; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOSTNAME; mirror -Renv /builds/dwo1/devone/dist/devone /devone"
+  only :
+    - master

@@ -1,0 +1,101 @@
+<article class="home-component">
+  <app-hero></app-hero>
+  <div class="sect-pad has-divider">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="d-flex h-100">
+            <img alt="DevOne, pourquoi me choisir ?" class="m-auto img-fluid" height="250"
+                 ngSrc="assets/images/pourquoi_me_choisir.svg"
+                 width="350">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h2>Travailler ensemble c’est le début de la réussite.</h2>
+          <p>Sélectionner un développeur qualifié et compétent pour la création de votre site internet est primordial.
+            Celui-ci va vous accompagner et donner vie à votre projet.</p>
+          <p> Je pratique quotidiennement la veille technologique.</p>
+          <p> J’accompagne chacun de mes clients tout au long de leurs projets. Grâce à mon expérience professionnelle
+            réussie, je suis en mesure d’adapter les meilleurs conseils, et de répondre à leurs attentes de manière
+            précise et transparente tout en proposant un support rapide en cas de difficulté.
+          </p>
+          <p> Vous avez un projet ? N’attendez plus et contactez-moi, je répondrais avec plaisir à toutes vos questions
+            et
+            nous pourrons également discuter de votre projet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-inside-wave-divider primary"></div>
+
+    <div class="about-me sect-pad has-divider text-light bg-primary">
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-md-7">
+            <h2 class="mb-4">À propos de moi</h2>
+            <p>Prénom : Denis – Âge : 27 ans</p>
+            <p>Passionné par le domaine de l’informatique, des outils numériques et technologiques depuis toujours, j’ai
+              décidé de créer mon entreprise DevOne.</p>
+            <p>Riche de plusieurs années d’expérience réussie en tant que concepteur et développeur d’application.</p>
+            <p>Ma mission est de co-créer votre projet et de vous proposer mes compétences et mon savoir-faire tout au
+              long de son développement et de sa réalisation pour assurer des résultats exceptionnels.</p>
+          </div>
+          <div class="col-md-5">
+            <div class="d-flex h-100">
+              <img alt="DevOne, qui suis-je ?" class="m-auto img-fluid" height="250"
+                   ngSrc="assets/images/qui_suis_je.svg" width="350">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-inside-wave-divider light"></div>
+    </div>
+
+    <div class="services sect-pad">
+      <div class="container mb-5">
+        <div class="services-title">
+          <h2>Des services premium à prix abordable</h2>
+          <p class="text-center text-uppercase">Vous avez un projet, je suis votre développeur !</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <app-service-block
+              [description]="'La création d’un site internet vous permet de présenter vos activités, vos produits et services, de créer un lien direct avec vos clients, de maintenir et développer votre chiffre d’affaires, de vendre des produits ou des services en ligne, d’augmenter votre notoriété, etc…'"
+              [imgHeight]="'200'" [imgSrc]="'assets/images/site_internet.svg'" [imgWidth]="'200'"
+              [img_alt]="'DevOne, création de site internet'"
+              [routerLink]="'/creation-site-internet'" [title]="'Création de site internet'">
+            </app-service-block>
+          </div>
+          <div class="col-md-4">
+            <app-service-block
+              [description]="'Le domaine du web est en constante évolution, et le fait d’avoir un site internet obsolète peut avoir un impact négatif sur votre entreprise. Outre l’ergonomie du site, les questions de sécurité, de référencement et de taux de conversion constituent des éléments de réponse essentiels.'"
+              [imgHeight]="'200'" [imgSrc]="'assets/images/refonte-site-internet.svg'" [imgWidth]="'200'"
+              [img_alt]="'DevOne, refonte de site internet'"
+              [routerLink]="'/refonte-de-site-internet'" [title]="'Refonte de site internet'">
+            </app-service-block>
+          </div>
+          <div class="col-md-4">
+            <app-service-block
+              [description]="'La communication digitale, c’est avant tout la numérisation des supports d’information. Mais au-delà, c’est aussi envisager la communication d’entreprise comme un écosystème entier, un environnement qui englobe et agit dans toutes les dimensions du Digital.'"
+              [imgHeight]="'200'" [imgSrc]="'assets/images/communication_digitale.svg'" [imgWidth]="'200'"
+              [img_alt]="'DevOne, référencement de site internet / SEO'"
+              [routerLink]="'/communication_digitale'" [title]="'Communication digitale'">
+            </app-service-block>
+          </div>
+        </div>
+      </div>
+      <div class="reviews sect-pad">
+        <div class="container">
+          <div class="row">
+<!--            <ng-container *ngFor="let review of reviews">-->
+<!--              <div class="col-md-4">-->
+                <app-reviews [reviews]="reviews"></app-reviews>
+<!--              </div>-->
+<!--            </ng-container>-->
+          </div>
+        </div>
+      </div>
+      <!--      <div class="bottom-inside-wave-divider light"></div>-->
+    </div>
+  </div>
+</article>
+
